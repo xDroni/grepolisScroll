@@ -9,7 +9,7 @@
 // @exclude      view-source://*
 // @exclude      https://classic.grepolis.com/game/*
 // @grant        none
-// @version      0.1.2
+// @version      0.1.3
 // @copyright    2018+
 // @license      MIT License
 // ==/UserScript==
@@ -28,5 +28,9 @@
 		el.scrollBy(0, 340);
 	else if(e.keyCode === 33)///page up
 		el.scrollBy(0, -340);
+	else if(e.keyCode === 35)///end
+		el.scrollBy(0, el.scrollHeight);
+	else if(e.keyCode === 36)///home
+		el.scrollBy(0, -el.scrollHeight);
 }, false);
 })();
