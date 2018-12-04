@@ -2,14 +2,14 @@
 // @name         Grepolis Scroll+
 // @author       Aktyn & Droni
 // @description  Scroll the forum of the alliance using arrow keys
-// @updateURL    http://dronidev.pl/grepolisScroll/grepolisScroll+.user.js
-// @downloadURL	 http://dronidev.pl/grepolisScroll/grepolisScroll+.user.js
+// @updateURL    https://github.com/xDroni/grepolisScroll/raw/master/grepolisScroll%2B.user.js
+// @downloadURL	 https://github.com/xDroni/grepolisScroll/raw/master/grepolisScroll%2B.user.js
 // @include      http://*.grepolis.com/game/*
 // @include      https://*.grepolis.com/game/*
 // @exclude      view-source://*
 // @exclude      https://classic.grepolis.com/game/*
 // @grant        none
-// @version      0.1.1
+// @version      0.1.2
 // @copyright    2018+
 // @license      MIT License
 // ==/UserScript==
