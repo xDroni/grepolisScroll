@@ -9,7 +9,7 @@
 // @exclude      view-source://*
 // @exclude      https://classic.grepolis.com/game/*
 // @grant        none
-// @version      0.1.3
+// @version      0.1.4
 // @copyright    2018+
 // @license      MIT License
 // ==/UserScript==
@@ -39,7 +39,7 @@
 			case 38: return useScroll(-120);	//arrow up
 			case 34: return useScroll(340);		//page down
 			case 33: return useScroll(-340);	//page up
-			case 35: return useScroll('bottom');//end
+			case 35: return useScroll('bottom');	//end
 			case 36: return useScroll('top');	//home
 		}
 	}, false);
