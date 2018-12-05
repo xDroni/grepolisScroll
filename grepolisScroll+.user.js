@@ -17,20 +17,30 @@
 (function() {
     'use strict';
 
+    var postlist;
+
+    function useScroll(val) {
+    	if((postlist = document.getElementById('postlist')) === null) return;
+
+    	//nie scrolluj podczas pisania postu
+    	if(document.activeElement === document.getElementById('forum_post_textarea')) return;
+
+    	if(val === 'bottom')
+    		postlist.scrollBy(0, postlist.scrollHeight);
+    	else if(val === 'top')
+    		postlist.scrollBy(0, -postlist.scrollHeight);
+    	else
+    		postlist.scrollBy(0, val);
+    }
+
     window.addEventListener('keydown', (e) => {
-	let el = document.getElementById('postlist');
-	if(!el)	return;
-	if(e.keyCode === 40)///arrow down
-		el.scrollBy(0, 120);
-	else if(e.keyCode === 38)///arrow up
-		el.scrollBy(0, -120);
-	else if(e.keyCode === 34)///page down
-		el.scrollBy(0, 340);
-	else if(e.keyCode === 33)///page up
-		el.scrollBy(0, -340);
-	else if(e.keyCode === 35)///end
-		el.scrollBy(0, el.scrollHeight);
-	else if(e.keyCode === 36)///home
-		el.scrollBy(0, -el.scrollHeight);
-}, false);
+		switch(e.keyCode) {
+			case 40: return useScroll(120);		//arrow down
+			case 38: return useScroll(-120);	//arrow up
+			case 34: return useScroll(340);		//page down
+			case 33: return useScroll(-340);	//page up
+			case 35: return useScroll('bottom');//end
+			case 36: return useScroll('top');	//home
+		}
+	}, false);
 })();
